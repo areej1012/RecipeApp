@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFCFD2"
+    android:layoutDirection="ltr"
+    tools:context=".PostRecipe">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="170dp"
+        android:layout_height="149dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fastfood" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.16000003">
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/title"
+            android:fontFamily="@font/swinghappy"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/author"
+            android:fontFamily="@font/swinghappy"
+            android:textSize="20sp"
+            android:inputType="textPersonName"
+            android:layout_margin="5dp"/>
+
+        <EditText
+            android:id="@+id/etIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_margin="5dp"
+            android:inputType="textPersonName"
+            android:fontFamily="@font/swinghappy"
+            android:textSize="20sp"
+            android:hint="@string/ingredients" />
+
+        <EditText
+            android:id="@+id/etInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:layout_margin="5dp"
+            android:hint="@string/instructions"
+            android:fontFamily="@font/swinghappy"
+            android:textSize="20sp"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/btAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/background"
+            android:fontFamily="@font/swinghappy"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:text="@string/add_recipe" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/background"
+            android:onClick="cancelRecipe"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/swinghappy"
+            android:textSize="20sp"
+            android:text="Cancel" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
